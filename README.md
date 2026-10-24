@@ -3,7 +3,7 @@
 Full-stack distributed email scheduling service and dashboard built for the **ReachInbox Hiring Assignment**.
 
 - **Candidate**: Vansh Arora
-- **Reviewers**: @Mitrajit, @Yadav036
+- **Reviewers**: Mitrajit, Yadav036
 
 ---
 
