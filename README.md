@@ -4,7 +4,6 @@ Full-stack distributed email scheduling service and dashboard built for the **Re
 
 - **Candidate**: Vansh Arora
 - **Reviewers**: Mitrajit, Yadav036
-- **Submission Form**: [ClickUp Submission Form](https://forms.clickup.com/9005062261/f/8cbwp3n-8876/6NNNJ92DV93PQTAYST)
 
 ---
 
@@ -102,26 +101,8 @@ Every email is scheduled as a BullMQ **delayed job** (`delay = scheduledAt - now
 
 ---
 
-## 📹 Demo Video Checklist (Max 5 mins)
-
-1. **Login**: Click **Instant Demo Sign-in** at `http://localhost:5173`.
-2. **Schedule**: Go to **Compose**, add recipients, set a subject/body, choose a delay (e.g. 2s), and schedule.
-3. **Scheduled & Sent**: Show the email in the **Scheduled** tab; watch it move to the **Sent** tab with an Ethereal preview link.
-4. **Server Restart**: Schedule an email 2 minutes ahead, stop the backend terminal (`Ctrl+C`), restart it (`npm run dev`), and confirm the email still dispatches on time.
-5. **Search**: Type in the search box to demonstrate real-time filtering.
-
----
-
 ## ⚖️ Trade-offs & Assumptions
 
 - **Fixed Window Rate Limiting**: Simple and O(1) performance via Redis Lua. Global 2-second limiter prevents boundary bursts.
 - **At-Least-Once Delivery**: Guaranteed via atomic database claims and unique `Message-ID` headers.
 - **Ethereal Mail**: Used for zero-cost, immediate end-to-end SMTP testing with web preview URLs.
-
----
-
-## 📬 GitHub Submission Access
-
-Please grant repository access to:
-- `Mitrajit`
-- `Yadav036`
